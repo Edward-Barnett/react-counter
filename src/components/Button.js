@@ -1,10 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const Button = ({ increment, onClickFunction }) => {
+const Button = ({ increment, onClickFunction, sign }) => {
   const handleClick = () => {
-    onClickFunction(increment)
-  }
-  return <button onClick={handleClick}>+{increment}</button>
-}
+    onClickFunction(increment);
+  };
 
-export default Button
+  return (
+    <button onClick={handleClick}>
+      {sign}
+      {increment}
+    </button>
+  );
+};
+
+export default Button;
